@@ -1,0 +1,38 @@
+li {
+    list-style-type : none;
+}
+
+#ul1 > li::before {
+    content: "►";
+}
+
+#ul2 > li::before {
+    content: "";
+    width: 4px;
+    height: 4px;
+    border: 2px solid blue;
+    margin-right: 5px;
+    vertical-align: middle;
+    transform: rotate(45deg);
+    display: inline-block;
+}
+#ul3 {
+    counter-reset: C1;
+}
+
+#ul3 > li::before {
+    counter-increment: C1;
+    content: counter(C1);
+    background-color: blue;
+    border: none;
+    color: white;
+    padding: 1px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 10px;
+    margin: 5px 5px;
+    border-radius: 50%;
+    font-weight: 900;
+}
